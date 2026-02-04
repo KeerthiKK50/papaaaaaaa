@@ -1,4 +1,11 @@
 // MOBILE ONLY
+const bgMusic = new Audio("music.mp3");
+bgMusic.loop = true;
+
+document.addEventListener("click", () => {
+  bgMusic.play().catch(() => {});
+}, { once: true });
+
 if (window.innerWidth > 768) {
   document.querySelectorAll(".page").forEach(p => p.style.display="none");
   document.getElementById("desktopBlock").style.display = "flex";
@@ -75,4 +82,5 @@ function typeText(text, element) {
     i++;
     if (i >= text.length) clearInterval(interval);
   }, 40);
+
 }
