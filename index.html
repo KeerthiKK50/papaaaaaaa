@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Papaaaaaaa 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- DESKTOP BLOCK -->
+<div id="desktopBlock">
+  <h2>❌ Sir ji ❌</h2>
+  <p>
+    Yeh letter sirf mobile ke liye hai 📱<br>
+    Please phone pe open karo, Papaaaaaaa 🥺
+  </p>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgm" autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 : LETTER -->
+<div class="page active" id="p1">
+  <div class="card">
+    <h2>💌 A Letter for Papaaaaaaa</h2>
+    <p>
+      Hey Aditya…<br>
+      aka <b>Papaaaaaaa</b> 😌<br><br>
+      Sir ji, please open this slowly 🥺
+    </p>
+    <button onclick="go('p1','p2')">Open Letter 💌</button>
+  </div>
+</div>
+
+<!-- PAGE 2 : PLACE -->
+<div class="page" id="p2">
+  <h2>Choose a place you want to visit with me 🛕</h2>
+  <div class="options">
+    <button onclick="choose(this)">Ram Mandir 🕉️</button>
+    <button onclick="choose(this)">Kedarnath 🏔️</button>
+    <button onclick="choose(this)">Tirupati Balaji 🙏</button>
+    <button onclick="choose(this)">Vaishno Devi 🌸</button>
+  </div>
+  <button class="next" onclick="lockedNext('p2','p3')">Next ➜</button>
+</div>
+
+<!-- PAGE 3 : MEET -->
+<div class="page" id="p3">
+  <h2>If in future I meet you, what will you do? 🥺</h2>
+  <div class="options">
+    <button onclick="choose(this)">Hug you 🤗</button>
+    <button onclick="choose(this)">Gift you 🎁</button>
+    <button onclick="choose(this)">Handshake 🤝</button>
+    <button onclick="choose(this)">Nothing 🙈</button>
+  </div>
+  <button class="next" onclick="lockedNext('p3','p4')">Next ➜</button>
+</div>
+
+<!-- PAGE 4 : BELIEF -->
+<div class="page" id="p4">
+  <h2>
+    Do you believe we will meet?<br>
+    Even if it's impossible… will you make it possible? 🥺
+  </h2>
+
+  <div class="options">
+    <button onclick="belief(true)">Yes 💖</button>
+    <button onclick="belief(false)">No 💔</button>
+  </div>
+
+  <div id="beliefMsg"></div>
+</div>
+
+<!-- PAGE 5 : PROPOSAL -->
+<div class="page" id="p5">
+  <h1>Papaaaaaaa… 💖</h1>
+  <p>Sir ji, will you be my boyfriend? 💍</p>
+
+  <button onclick="finalYes()">YES 😭💖</button>
+  <button onclick="finalYes()">Obviously YES 😌</button>
+
+  <div id="finalEffect"></div>
+  <div id="secretMsg"></div>
+  <p id="screenshotHint"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
